@@ -553,162 +553,32 @@
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
-
-
-
-<!-- Out-of-Domain Audio Samples Section -->
-<section class="section audio-section">
+<!-- Keyword Presence Detection Figure -->
+<section class="section figures-section">
   <div class="container is-max-desktop">
-    <h2 class="audio-section-title">Out-of-Domain Samples</h2>
-    <p class="audio-section-subtitle">
-      1 test cases demonstrating keyword-guided target speaker extraction on out-of-domain data.<br>
-      Each case contains a mixture, enrollment keywords, and extracted output. Ground-truth and speech enrollment are not available.
-    </p>
-
-    <div class="out-of-domain-note">
-      <i class="fas fa-info-circle"></i>
-      <strong>Note:</strong> These samples demonstrate the model's generalization capability on unseen data. 
-      Ground-truth audio and text are not available for out-of-domain samples.
-    </div>
-
-    <!-- Test Case 1 -->
-    <div class="sample-card">
-      <div class="sample-header">
-        <div class="sample-number">1</div>
-        <div class="sample-title">Test Case 1</div>
-      </div>
-      
-      <!-- Row 1: Mixture -->
-      <div class="shared-audio-row">
-        <div class="audio-item" style="grid-column: span 2;">
-          <div class="audio-label"><i class="fas fa-volume-up"></i> Mixed Speech (Input)</div>
-          <div class="audio-player">
-            <audio controls>
-              <source src="static/audio/out_of_domain/case1/mixture.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
+    <div class="figure-card">
+      <div class="figure-header">
+        <div class="figure-icon">
+          <i class="fas fa-chart-heatmap"></i>
         </div>
+        <div class="figure-title">Detect Stage: Keyword Presence Detection and Temporal Localization</div>
       </div>
-      
-      <!-- Row 2: Enrollment & Extraction -->
-      <div class="subgroup">
-        <div class="subgroup-header"><span class="subgroup-number">1</span> <i class="fas fa-key"></i> Enrollment & Extraction</div>
-        <div class="audio-row">
-          <div class="audio-item" style="flex: 1;">
-            <div class="target-text-box" style="margin-bottom: 0;">
-              <div class="target-text-label">Enrollment Keywords</div>
-              <div class="target-text-content">"why you bully me"</div>
-            </div>
-          </div>
-          <div class="audio-item" style="flex: 1;">
-            <div class="audio-label"><i class="fas fa-magic"></i> Extracted Output</div>
-            <div class="audio-player">
-              <audio controls>
-                <source src="static/audio/out_of_domain/case1/s1mple_extracted.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
+      <div class="figure-container">
+        <img src="static/images/attention_map_visualization.png" alt="Keyword Presence Detection and Temporal Localization" class="paper-image" loading="lazy" />
+      </div>
+      <div class="figure-caption">
+        <div class="figure-caption-label">Figure 2: Keyword Presence Detection and Temporal Localization</div>
+        <div class="figure-caption-text">
+          Cross-attention heatmaps for a positive sample (left, keywords present in the mixture) and a negative sample (right, keywords absent). The X-axis represents speech frame indices, and the Y-axis corresponds to the phoneme sequence of the keyword.
         </div>
       </div>
     </div>
-
-<!-- 
-    Test Case 2
-    <div class="sample-card">
-      <div class="sample-header">
-        <div class="sample-number">2</div>
-        <div class="sample-title">Test Case 2</div>
-      </div>
-      
-      Row 1: Mixture
-      <div class="shared-audio-row">
-        <div class="audio-item" style="grid-column: span 2;">
-          <div class="audio-label"><i class="fas fa-volume-up"></i> Mixed Speech (Input)</div>
-          <div class="audio-player">
-            <audio controls>
-              <source src="static/audio/out_of_domain/case2/mixture.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-      </div>
-      
-      Row 2: Enrollment & Extraction
-      <div class="subgroup">
-        <div class="subgroup-header"><span class="subgroup-number">1</span> <i class="fas fa-key"></i> Enrollment & Extraction</div>
-        <div class="audio-row">
-          <div class="audio-item" style="flex: 1;">
-            <div class="target-text-box" style="margin-bottom: 0;">
-              <div class="target-text-label">Enrollment Keywords</div>
-              <div class="target-text-content">"请填入关键词"</div>
-            </div>
-          </div>
-          <div class="audio-item" style="flex: 1;">
-            <div class="audio-label"><i class="fas fa-magic"></i> Extracted Output</div>
-            <div class="audio-player">
-              <audio controls>
-                <source src="static/audio/out_of_domain/case2/output.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    Test Case 3
-    <div class="sample-card">
-      <div class="sample-header">
-        <div class="sample-number">3</div>
-        <div class="sample-title">Test Case 3</div>
-      </div>
-      
-      Row 1: Mixture
-      <div class="shared-audio-row">
-        <div class="audio-item" style="grid-column: span 2;">
-          <div class="audio-label"><i class="fas fa-volume-up"></i> Mixed Speech (Input)</div>
-          <div class="audio-player">
-            <audio controls>
-              <source src="static/audio/out_of_domain/case3/mixture.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-      </div>
-      
-      Row 2: Enrollment & Extraction
-      <div class="subgroup">
-        <div class="subgroup-header"><span class="subgroup-number">1</span> <i class="fas fa-key"></i> Enrollment & Extraction</div>
-        <div class="audio-row">
-          <div class="audio-item" style="flex: 1;">
-            <div class="target-text-box" style="margin-bottom: 0;">
-              <div class="target-text-label">Enrollment Keywords</div>
-              <div class="target-text-content">"请填入关键词"</div>
-            </div>
-          </div>
-          <div class="audio-item" style="flex: 1;">
-            <div class="audio-label"><i class="fas fa-magic"></i> Extracted Output</div>
-            <div class="audio-player">
-              <audio controls>
-                <source src="static/audio/out_of_domain/case3/output.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
--->
   </div>
 </section>
-<!-- End Out-of-Domain Audio Samples Section -->
-<!-- End Out-of-Domain Audio Samples Section -->
-
 
 <div class="section-divider"></div>
+
+<h2 class="audio-section-title" style="margin-bottom: 0.5rem;">Extract Stage</h2>
 
 <!-- In-Domain Audio Samples Section -->
 <section class="section audio-section">
@@ -1267,7 +1137,155 @@
 </section>
 <!-- End In-Domain Audio Samples Section -->
 
+<!-- Out-of-Domain Audio Samples Section -->
+<section class="section audio-section">
+  <div class="container is-max-desktop">
+    <h2 class="audio-section-title">Out-of-Domain Samples</h2>
+    <p class="audio-section-subtitle">
+      1 test cases demonstrating keyword-guided target speaker extraction on out-of-domain data.<br>
+      Each case contains a mixture, enrollment keywords, and extracted output. Ground-truth and speech enrollment are not available.
+    </p>
 
+    <div class="out-of-domain-note">
+      <i class="fas fa-info-circle"></i>
+      <strong>Note:</strong> These samples demonstrate the model's generalization capability on unseen data. 
+      Ground-truth audio and text are not available for out-of-domain samples.
+    </div>
+
+    <!-- Test Case 1 -->
+    <div class="sample-card">
+      <div class="sample-header">
+        <div class="sample-number">1</div>
+        <div class="sample-title">Test Case 1</div>
+      </div>
+      
+      <!-- Row 1: Mixture -->
+      <div class="shared-audio-row">
+        <div class="audio-item" style="grid-column: span 2;">
+          <div class="audio-label"><i class="fas fa-volume-up"></i> Mixed Speech (Input)</div>
+          <div class="audio-player">
+            <audio controls>
+              <source src="static/audio/out_of_domain/case1/mixture.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Row 2: Enrollment & Extraction -->
+      <div class="subgroup">
+        <div class="subgroup-header"><span class="subgroup-number">1</span> <i class="fas fa-key"></i> Enrollment & Extraction</div>
+        <div class="audio-row">
+          <div class="audio-item" style="flex: 1;">
+            <div class="target-text-box" style="margin-bottom: 0;">
+              <div class="target-text-label">Enrollment Keywords</div>
+              <div class="target-text-content">"why you bully me"</div>
+            </div>
+          </div>
+          <div class="audio-item" style="flex: 1;">
+            <div class="audio-label"><i class="fas fa-magic"></i> Extracted Output</div>
+            <div class="audio-player">
+              <audio controls>
+                <source src="static/audio/out_of_domain/case1/s1mple_extracted.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- 
+    Test Case 2
+    <div class="sample-card">
+      <div class="sample-header">
+        <div class="sample-number">2</div>
+        <div class="sample-title">Test Case 2</div>
+      </div>
+      
+      Row 1: Mixture
+      <div class="shared-audio-row">
+        <div class="audio-item" style="grid-column: span 2;">
+          <div class="audio-label"><i class="fas fa-volume-up"></i> Mixed Speech (Input)</div>
+          <div class="audio-player">
+            <audio controls>
+              <source src="static/audio/out_of_domain/case2/mixture.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+      
+      Row 2: Enrollment & Extraction
+      <div class="subgroup">
+        <div class="subgroup-header"><span class="subgroup-number">1</span> <i class="fas fa-key"></i> Enrollment & Extraction</div>
+        <div class="audio-row">
+          <div class="audio-item" style="flex: 1;">
+            <div class="target-text-box" style="margin-bottom: 0;">
+              <div class="target-text-label">Enrollment Keywords</div>
+              <div class="target-text-content">"请填入关键词"</div>
+            </div>
+          </div>
+          <div class="audio-item" style="flex: 1;">
+            <div class="audio-label"><i class="fas fa-magic"></i> Extracted Output</div>
+            <div class="audio-player">
+              <audio controls>
+                <source src="static/audio/out_of_domain/case2/output.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    Test Case 3
+    <div class="sample-card">
+      <div class="sample-header">
+        <div class="sample-number">3</div>
+        <div class="sample-title">Test Case 3</div>
+      </div>
+      
+      Row 1: Mixture
+      <div class="shared-audio-row">
+        <div class="audio-item" style="grid-column: span 2;">
+          <div class="audio-label"><i class="fas fa-volume-up"></i> Mixed Speech (Input)</div>
+          <div class="audio-player">
+            <audio controls>
+              <source src="static/audio/out_of_domain/case3/mixture.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+      
+      Row 2: Enrollment & Extraction
+      <div class="subgroup">
+        <div class="subgroup-header"><span class="subgroup-number">1</span> <i class="fas fa-key"></i> Enrollment & Extraction</div>
+        <div class="audio-row">
+          <div class="audio-item" style="flex: 1;">
+            <div class="target-text-box" style="margin-bottom: 0;">
+              <div class="target-text-label">Enrollment Keywords</div>
+              <div class="target-text-content">"请填入关键词"</div>
+            </div>
+          </div>
+          <div class="audio-item" style="flex: 1;">
+            <div class="audio-label"><i class="fas fa-magic"></i> Extracted Output</div>
+            <div class="audio-player">
+              <audio controls>
+                <source src="static/audio/out_of_domain/case3/output.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+-->
+  </div>
+</section>
+<!-- End Out-of-Domain Audio Samples Section -->
+<!-- End Out-of-Domain Audio Samples Section -->
 
 
 <!--BibTex citation - hidden until publication
